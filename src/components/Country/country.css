@@ -1,0 +1,41 @@
+.detailed-country-content h2 {
+  margin: 1em 0;
+}
+.detailed-country-content p {
+  margin-bottom: 1em;
+}
+.lang {
+  margin: 2em 0;
+}
+.border-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* .detailed-country {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detailed-country-image {
+  flex-basis: 45%;
+}
+.detailed-country-content {
+  flex-basis: 45%;
+} */
+
+@media only screen and (min-width: 1000px) {
+  .detailed-country {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .detailed-country-image {
+    flex-basis: 45%;
+  }
+  .detailed-country-content {
+    flex-basis: 45%;
+  }
+}
