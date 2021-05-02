@@ -22,8 +22,10 @@ const CountryBOrder = ({ border }) => {
   }, [border]);
 
   return (
-    <div className="border-group" onClick={() => handleClick(borders.name)}>
-      <button className="border-btn">{borders.name}</button>
+    <div className="" onClick={() => handleClick(borders.name)}>
+      <button className="bg-white border-solid border-2  dark:bg-mirage-500 hover:bg-gray-100 px-8 py-1 my-2  ">
+        {borders.name}
+      </button>
     </div>
   );
 };

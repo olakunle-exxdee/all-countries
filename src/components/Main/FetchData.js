@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CountryList from "../CountryList/CountryList";
 
-import "./fetchdata.css";
-
 const FetchData = () => {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("");
@@ -22,13 +20,13 @@ const FetchData = () => {
   }, []);
 
   if (loading) {
-    return <div className="loader"></div>;
+    return <div className="bg-gray-50 dark:bg-mirage-900 h-screen"></div>;
   }
 
   return (
     <>
-      <div className="container-md">
-        <div className="input-group">
+      <div className="">
+        <div className=" mx-8 flex   justify-between sticky items-center flex-col md:flex-row my-4">
           <input
             placeholder="Search Country"
             onChange={(e) => {
@@ -36,10 +34,10 @@ const FetchData = () => {
               setFilter("");
             }}
             aria-label="Search Country"
-            className="p-3"
+            className="p-3 bg-gray-50 dark:bg-mirage-500 "
           />
           <select
-            className="p-3"
+            className="p-3 bg-gray-50 dark:bg-mirage-500 text-gray-500 dark:text-gray-200"
             onChange={(e) => {
               setSearch("");
               setFilter(e.target.value);
@@ -54,7 +52,7 @@ const FetchData = () => {
           </select>
         </div>
 
-        <div className="row">
+        <div className="mx-8 grid md:grid-cols-1 gap-4 lg:grid-cols-3  xl:grid-cols-4 ">
           {countryList.map((country) => {
             return (
               <CountryList

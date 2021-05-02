@@ -6,7 +6,7 @@ import Country from "../components/Country/Country";
 
 const MainPage = () => {
   return (
-    <div className="main-page">
+    <div className="flex items-center flex-col justify-center">
       <Router>
         <Nav />
         <Switch>

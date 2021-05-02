@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router";
-
 import DetailedCountry from "./DetailedCountry";
-import "./country.css";
 
 const Country = () => {
   const { id } = useParams();
@@ -27,14 +25,20 @@ const Country = () => {
     fetchSingleCountry();
   }, [id]);
   if (loading) {
-    return <div className="loader"></div>;
+    return (
+      <div className="bg-gray-50 dark:bg-mirage-900 h-screen">
+        <h1>loading</h1>
+      </div>
+    );
   }
   return (
-    <div className=" container country">
+    <div className="mx-8">
       <div className="back" onClick={handleClick}>
-        <button className="btn">Back</button>
+        <button className="bg-white border-solid border-2 text-mirage-500 dark:text-mirage-100 hover:bg-gray-100 dark:bg-mirage-500 px-8 py-1 my-2 ">
+          Back
+        </button>
       </div>
-      <div className="detailed-country-wrappper ">
+      <div className="">
         {country.map((each) => {
           return <DetailedCountry key={each.name} country={each} />;
         })}

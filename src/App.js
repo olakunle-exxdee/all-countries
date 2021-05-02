@@ -1,10 +1,9 @@
 import React from "react";
-import "./App.css";
 import MainPage from "./Pages/MainPage";
 
 function App() {
   return (
-    <div className="app">
+    <div className="bg-gray-50 dark:bg-mirage-900 ">
       <MainPage />
     </div>
   );

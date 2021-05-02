@@ -1,16 +1,14 @@
 import React from "react";
 import CountryBorder from "./CountryBorder";
-import "./country.css";
 
 const DetailedCountry = ({ country }) => {
   return (
-    <div className="detailed-country">
-      <div className="detailed-country-image ">
-        <img src={country.flag} alt={country.name} />
+    <div className="my-4 grid gap-x-12   md:grid-cols-2  items-stretch ">
+      <div className=" ">
+        <img src={country.flag} alt={country.name} className="" />
       </div>
-      <div className="detailed-country-content ">
-        <h2>{country.name}</h2>
-
+      <div className="text-gray-500 dark:text-gray-200 ">
+        <h2 className="font-bold text-xl my-4 md:text-2xl">{country.name}</h2>
         <p>
           <strong>Native Name: </strong>
           {country.nativeName}
@@ -31,22 +29,13 @@ const DetailedCountry = ({ country }) => {
           <strong>Population: </strong>
           {country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </p>
-        <div className="lang">
-          {country.languages.map((language) => {
-            return (
-              <p key={language.name}>
-                <strong>Language: </strong>
-                {language ? language.name : ""}
-              </p>
-            );
-          })}
-        </div>
+
         <div className="borders">
           <p>
             <strong>Border Countries: </strong>
           </p>
         </div>
-        <div className="border-wrapper">
+        <div className="my-4 md:flex flex-wrap gap-x-4">
           {country.borders.map((border) => {
             return <CountryBorder key={border} border={border} />;
           })}
