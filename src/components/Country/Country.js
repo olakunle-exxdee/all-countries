@@ -25,7 +25,7 @@ const Country = () => {
     fetchSingleCountry();
   }, [id]);
   if (loading) {
-    return <div className="bg-gray-50 dark:bg-mirage-900 h-screen"></div>;
+    return <div className="bg-gray-50 dark:bg-mirage-900 container"></div>;
   }
   return (
     <div className="mx-8">
