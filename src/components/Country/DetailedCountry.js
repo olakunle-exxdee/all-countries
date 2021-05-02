@@ -3,7 +3,7 @@ import CountryBorder from "./CountryBorder";
 
 const DetailedCountry = ({ country }) => {
   return (
-    <div className="my-4 grid gap-x-12   md:grid-cols-2  items-stretch ">
+    <div className="my-4 grid gap-x-12 md:grid-cols-2 items-stretch h-screen ">
       <div className=" ">
         <img src={country.flag} alt={country.name} className="" />
       </div>
